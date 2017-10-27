@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>SongManager.png</file>
+    </qresource>
+</RCC>

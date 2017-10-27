@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSettings>
+#include <QDebug>
+#include <QDesktopWidget>
+#include <QDesktopServices>
+#include <QUrl>
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +22,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    void SaveSettings();
+    void LoadSettings();
 };
 
 #endif // MAINWINDOW_H

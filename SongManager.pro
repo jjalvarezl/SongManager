@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-10-23T13:17:57
+# Project created by QtCreator 2017-10-23T13:36:15
 #
 #-------------------------------------------------
 
@@ -25,10 +25,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    choosedirectorydialog.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    choosedirectorydialog.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    choosedirectorydialog.ui
+
+RESOURCES += \
+    resources.qrc
