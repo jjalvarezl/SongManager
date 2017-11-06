@@ -26,11 +26,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    choosedirectorydialog.cpp
+    choosedirectorydialog.cpp \
+    songmanager.cpp
 
 HEADERS += \
         mainwindow.h \
-    choosedirectorydialog.h
+    choosedirectorydialog.h \
+    songmanager.h
 
 FORMS += \
         mainwindow.ui \

@@ -26,7 +26,7 @@
     <property name="title">
      <string>Insertar:</string>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -93,7 +93,7 @@
     <property name="title">
      <string>Transponer:</string>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -196,39 +196,6 @@
      </layout>
     </widget>
    </widget>
-   <widget class="QTreeWidget" name="treeWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>240</y>
-      <width>331</width>
-      <height>141</height>
-     </rect>
-    </property>
-    <column>
-     <property name="text">
-      <string>Carpetas</string>
-     </property>
-    </column>
-    <item>
-     <property name="text">
-      <string>Hola</string>
-     </property>
-     <property name="flags">
-      <set>ItemIsEditable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>NMundo</string>
-     </property>
-     <item>
-      <property name="text">
-       <string>Hola</string>
-      </property>
-     </item>
-    </item>
-   </widget>
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
@@ -241,7 +208,7 @@
     <property name="title">
      <string>Presentación</string>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -280,7 +247,7 @@
     <property name="title">
      <string>Metadatos</string>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -362,11 +329,11 @@
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>240</y>
+      <y>250</y>
       <width>701</width>
       <height>361</height>
      </rect>
@@ -396,7 +363,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -418,6 +385,16 @@
      </item>
     </layout>
    </widget>
+   <widget class="QTreeView" name="treeViewSongsDirectories">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>231</y>
+      <width>341</width>
+      <height>151</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -437,6 +414,7 @@
     <property name="title">
      <string>Editar</string>
     </property>
+    <addaction name="actionCambiarEspacioDeTrabajo"/>
    </widget>
    <widget class="QMenu" name="menuAyuda">
     <property name="title">
@@ -456,6 +434,11 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionCambiarEspacioDeTrabajo">
+   <property name="text">
+    <string>Cambiar Espacio de Trabajo</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

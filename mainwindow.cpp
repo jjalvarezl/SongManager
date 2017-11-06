@@ -17,7 +17,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::LoadSettings(){
 
-
     //Loading window settings
     QSettings setting("jjalvarezl","SongManager");
     setting.beginGroup("MainWindow");
@@ -26,6 +25,19 @@ void MainWindow::LoadSettings(){
     if (!setting.contains("workspace")){
         exit(0);
     }
+
+    //Loading directories and songs
+    SongManager * sm = new SongManager(setting.value("workspace").toString());
+
+    //Loading directories on QTreeView
+    QFileSystemModel *model = new QFileSystemModel;
+    model->setRootPath(sm->getWorkspace()+sm->getSongsDir());
+    ui->treeViewSongsDirectories->setModel(model);
+    const QModelIndex rootIndex = model->index(QDir::cleanPath(sm->getWorkspace()+sm->getSongsDir()));
+    if (rootIndex.isValid())
+        ui->treeViewSongsDirectories->setRootIndex(rootIndex);
+        ui->treeViewSongsDirectories->setRowHidden(1, rootIndex, true);
+    ui->treeViewSongsDirectories->show();
 
     //Position MainWindow setting
     if (setting.contains("position")){
@@ -57,4 +69,22 @@ void MainWindow::SaveSettings(){
 
     //Show saved when debugger
     qDebug() << "Saved";
+}
+
+void MainWindow::on_actionCambiarEspacioDeTrabajo_triggered()
+{
+    qDebug()<<"Cambiar espacio de trabajo activado";
+    ChooseDirectoryDialog cdd;
+    //cdd.setModal(true);
+
+    //Exec It stops execution of main until opened dialog closes
+    cdd.exec();
+}
+
+void MainWindow::LoadDirectories(){
+
+}
+
+void MainWindow::LoadSongs(){
+
 }

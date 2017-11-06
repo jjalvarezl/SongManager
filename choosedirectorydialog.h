@@ -20,7 +20,6 @@ public:
     explicit ChooseDirectoryDialog(QWidget *parent = 0);
     ~ChooseDirectoryDialog();
 
-
 private slots:
     void on_pushButtonSearchDir_clicked();
     void on_buttonBoxAcceptReject_clicked(QAbstractButton *button);

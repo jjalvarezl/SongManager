@@ -15,7 +15,7 @@
 </fonts>
   <user_defined user1="User Defined 1" user2="User Defined 2" user3="User Defined 3"/>
   <paint new="false"/>
-  <songfolder>Servicio</songfolder>
+  <songfolder>Servicio/Mozaicos</songfolder>
   <startmode/>
   <song_revert_on_dont_save>true</song_revert_on_dont_save>
   <slide_style_color enabled="true"/>

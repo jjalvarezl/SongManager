@@ -11,6 +11,13 @@ ChooseDirectoryDialog::ChooseDirectoryDialog(QWidget *parent) :
     //Change ok and cancel text.
     ui->buttonBoxAcceptReject->button(QDialogButtonBox::Apply)->setText("Aceptar");
     ui->buttonBoxAcceptReject->button(QDialogButtonBox::Cancel)->setText("Cancelar");
+
+    //Setting line text with actual path information
+    QSettings setting("jjalvarezl","SongManager");
+    setting.beginGroup("MainWindow");
+    if (setting.contains("workspace")) {
+        ui->lineEditDirPath->setText(setting.value("workspace").toString());
+    }
 }
 
 ChooseDirectoryDialog::~ChooseDirectoryDialog()
@@ -20,6 +27,7 @@ ChooseDirectoryDialog::~ChooseDirectoryDialog()
 
 void ChooseDirectoryDialog::on_pushButtonSearchDir_clicked()
 {
+    //Opening directory chooser
     ui->lineEditDirPath->setText(
         QFileDialog::getExistingDirectory(this, tr("Elija el directorio de trabajo"), ui->lineEditDirPath->text(), QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks)
     );
