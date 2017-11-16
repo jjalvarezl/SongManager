@@ -48,6 +48,8 @@ private slots:
 
     void on_pushButtonPrintSong_clicked();
 
+    void on_pushButtonEditDirName_clicked();
+
 private:
     Ui::MainWindow *ui;
     QFileSystemModel *model;
@@ -57,8 +59,10 @@ private:
     void LoadSettings();
     void LoadDirectoriesAndSongsInTreeView();
     void clearGUI();
-    void enableDirGUIOptions();
-    void enableFileGUIOptions();
+    void enableGUIOptions(const bool &dirOptionsGUIEnabled);
+    void enableDirOptionsGUI (const bool &enable);
+    void enableSongOptionsGUI (const bool &enable);
+    void disableDirAndSongsOfGUI();
 };
 
 #endif // MAINWINDOW_H
