@@ -27,17 +27,10 @@ void MainWindow::LoadSettings(){
     }
 
     //Loading directories and songs
-    SongManager * sm = new SongManager(setting.value("workspace").toString());
+    this->setSongManager(new SongManager(setting.value("workspace").toString()));
 
-    //Loading directories on QTreeView
-    QFileSystemModel *model = new QFileSystemModel;
-    model->setRootPath(sm->getWorkspace()+sm->getSongsDir());
-    ui->treeViewSongsDirectories->setModel(model);
-    const QModelIndex rootIndex = model->index(QDir::cleanPath(sm->getWorkspace()+sm->getSongsDir()));
-    if (rootIndex.isValid())
-        ui->treeViewSongsDirectories->setRootIndex(rootIndex);
-        ui->treeViewSongsDirectories->setRowHidden(1, rootIndex, true);
-    ui->treeViewSongsDirectories->show();
+    this->LoadDirectoriesAndSongsInTreeView();
+
 
     //Position MainWindow setting
     if (setting.contains("position")){
@@ -71,6 +64,16 @@ void MainWindow::SaveSettings(){
     qDebug() << "Saved";
 }
 
+void MainWindow::LoadDirectoriesAndSongsInTreeView(){
+    model = new QFileSystemModel;
+    model->setRootPath(this->getSongManager()->getWorkspace()+this->getSongManager()->getSongsDir());
+    ui->treeViewSongsDirectories->setModel(model);
+    const QModelIndex rootIndex = model->index(QDir::cleanPath(this->getSongManager()->getWorkspace()+this->getSongManager()->getSongsDir()));
+    ui->treeViewSongsDirectories->setRootIndex(rootIndex);
+    ui->treeViewSongsDirectories->show();
+}
+
+//EVENTS
 void MainWindow::on_actionCambiarEspacioDeTrabajo_triggered()
 {
     qDebug()<<"Cambiar espacio de trabajo activado";
@@ -81,10 +84,141 @@ void MainWindow::on_actionCambiarEspacioDeTrabajo_triggered()
     cdd.exec();
 }
 
-void MainWindow::LoadDirectories(){
+
+void MainWindow::on_pushButtonMakeDir_clicked()
+{
+    QModelIndex index = ui->treeViewSongsDirectories->currentIndex();
+    if (!index.isValid()) return;
+    bool ok;
+    QString dirName =  QInputDialog::getText(this, tr("Nombre del nuevo directorio"),
+                                             tr("Ingrese el nombre del nuevo directorio a crear:"), QLineEdit::Normal,
+                                             "", &ok);
+    if (!ok || dirName.isEmpty()) return;
+    model->mkdir(index,dirName);
+}
+
+void MainWindow::on_pushButtonMakeSong_clicked()
+{
+    QModelIndex index = ui->treeViewSongsDirectories->currentIndex();
+    if (!index.isValid()) return;
+    bool ok;
+    QString fileName =  QInputDialog::getText(this, tr("Nombre de la canción"),
+                                             tr("Ingrese el nombre de la canción nueva:"), QLineEdit::Normal,
+                                             "", &ok);
+    if (!ok || fileName.isEmpty()) return;
+    QString dirPath;
+    if(QFileInfo(model->filePath(index)).isDir()){
+        dirPath = model->filePath(index);
+    } else {
+        dirPath = QFileInfo(model->filePath(index)).path();
+    }
+
+    sm->addCurrentSongData("title", fileName);
+
+    if(!sm->writeSong(dirPath+"/"+fileName)){
+        QMessageBox::critical(this,"Error", "No se puede escribir el archivo, verifique si la ruta existe o faltan permisos de carpeta", QMessageBox::Close);
+    }
+}
+
+void MainWindow::on_treeViewSongsDirectories_clicked(const QModelIndex &index)
+{
+    this->clearGUI();
+    //Knowing if selected index is dir or file
+    if(QFileInfo(model->filePath(index)).isDir()){
+        //dirPath = model->filePath(index);
+        this->enableDirGUIOptions();
+    } else {
+        //dirPath = QFileInfo(model->filePath(index)).path();
+        //Open file as fileInfo
+        QString filePath = model->filePath(index);
+        QFileInfo fileInfo = QFileInfo(filePath);
+
+        //Loading song data
+        if (fileInfo.isFile()){
+            if(this->getSongManager()->loadSong(filePath)){
+                //Refect song data on ui
+
+                //lyrics
+                ui->plainTextEditChordsLyrics->document()->setPlainText(
+                    this->getSongManager()->getCurrentSongData().value("lyrics")
+                );
+                //title
+                ui->lineEditTitle->setText(
+                    this->getSongManager()->getCurrentSongData().value("title")
+                );
+                //author
+                ui->lineEditAuthor->setText(
+                    this->getSongManager()->getCurrentSongData().value("author")
+                );
+                //key
+                ui->lineEditSongKey->setText(
+                    this->getSongManager()->getCurrentSongData().value("key")
+                );
+                //print order
+                ui->lineEditOrder->setText(
+                    this->getSongManager()->getCurrentSongData().value("order")
+                );
+                this->enableFileGUIOptions();
+            } else {
+                QMessageBox::critical(this,"Error", "El archivo está corrupto o dañado, no se puede leer el contenido del archivo", QMessageBox::Close);
+            }
+        }
+    }
 
 }
 
-void MainWindow::LoadSongs(){
+void MainWindow::on_pushButtonEditSongName_clicked()
+{
 
 }
+
+void MainWindow::on_pushButtonDeleteDir_clicked()
+{
+
+}
+
+void MainWindow::on_pushButtonSaveSong_clicked()
+{
+
+}
+
+void MainWindow::on_pushButtonDeleteSong_clicked()
+{
+
+}
+
+void MainWindow::on_pushButtonPrintSong_clicked()
+{
+
+}
+
+
+//GETTERS AND SETTERS
+
+SongManager *MainWindow::getSongManager() const
+{
+    return sm;
+}
+
+void MainWindow::setSongManager(SongManager *value)
+{
+    sm = value;
+}
+
+
+//AUXILIAR OPERATIONS
+
+
+void MainWindow::clearGUI() {
+
+}
+
+void MainWindow::enableDirGUIOptions(){
+
+}
+
+void MainWindow::enableFileGUIOptions(){
+
+}
+
+

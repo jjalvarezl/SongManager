@@ -8,6 +8,7 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include <QFileSystemModel>
+#include <QInputDialog>
 #include "choosedirectorydialog.h"
 #include "songmanager.h"
 
@@ -23,16 +24,41 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    SongManager *getSongManager() const;
+    void setSongManager(SongManager *value);
+
 private slots:
     void on_actionCambiarEspacioDeTrabajo_triggered();
 
+    void on_pushButtonMakeDir_clicked();
+
+    void on_treeViewSongsDirectories_clicked(const QModelIndex &index);
+
+    void on_pushButtonMakeSong_clicked();
+
+    void on_pushButtonEditSongName_clicked();
+
+    void on_pushButtonDeleteDir_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButtonSaveSong_clicked();
+
+    void on_pushButtonDeleteSong_clicked();
+
+    void on_pushButtonPrintSong_clicked();
+
 private:
     Ui::MainWindow *ui;
+    QFileSystemModel *model;
+    SongManager *sm;
 
     void SaveSettings();
     void LoadSettings();
-    void LoadDirectories();
-    void LoadSongs();
+    void LoadDirectoriesAndSongsInTreeView();
+    void clearGUI();
+    void enableDirGUIOptions();
+    void enableFileGUIOptions();
 };
 
 #endif // MAINWINDOW_H

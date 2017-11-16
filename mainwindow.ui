@@ -6,394 +6,480 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1104</width>
-    <height>663</height>
+    <width>1121</width>
+    <height>701</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Song Manager</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>630</x>
-      <y>10</y>
-      <width>241</width>
-      <height>221</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Insertar:</string>
-    </property>
-    <widget class="QWidget" name="layoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>30</y>
-       <width>201</width>
-       <height>181</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_5">
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="text">
-         <string>Sección</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="text">
-         <string>Acordes </string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="text">
-         <string>Versos Multiples</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_4">
-        <property name="text">
-         <string>Comentario</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_5">
-        <property name="text">
-         <string>Columna</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_6">
-        <property name="text">
-         <string>Página</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>880</x>
-      <y>10</y>
-      <width>191</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Transponer:</string>
-    </property>
-    <widget class="QWidget" name="layoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>30</y>
-       <width>151</width>
-       <height>80</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_7">
-      <item>
-       <widget class="QComboBox" name="comboBox">
-        <item>
-         <property name="text">
-          <string>Sostenidos</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Bemoles</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item>
-       <widget class="QComboBox" name="comboBox_2">
-        <item>
-         <property name="text">
-          <string>-6</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>-5</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>-4</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>-3</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>-2</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>-1</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>0</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>1</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>2</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>3</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>4</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>5</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>6</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_7">
-        <property name="text">
-         <string>Aceptar</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_3">
-    <property name="geometry">
-     <rect>
-      <x>880</x>
-      <y>140</y>
-      <width>191</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Presentación</string>
-    </property>
-    <widget class="QWidget" name="layoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>124</width>
-       <height>48</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_6">
-      <item>
-       <widget class="QRadioButton" name="radioButton">
-        <property name="text">
-         <string>Solo Acordes</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="radioButton_2">
-        <property name="text">
-         <string>Acordes y Letra</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_4">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>10</y>
-      <width>241</width>
-      <height>221</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Metadatos</string>
-    </property>
-    <widget class="QWidget" name="layoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>221</width>
-       <height>181</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_9">
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <widget class="QLabel" name="labelTitle">
-          <property name="text">
-           <string>Titulo:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineTextTitle"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
-        <item>
-         <widget class="QLabel" name="labelAuthor">
-          <property name="text">
-           <string>Autor:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEditAuthor"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
-        <item>
-         <widget class="QLabel" name="labelKey">
-          <property name="text">
-           <string>Tónica:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_8">
-        <item>
-         <widget class="QLabel" name="label">
-          <property name="text">
-           <string>Orden:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_2"/>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </widget>
-   </widget>
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
       <x>360</x>
       <y>10</y>
       <width>20</width>
-      <height>591</height>
+      <height>631</height>
      </rect>
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="Line" name="line_2">
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>250</y>
-      <width>701</width>
-      <height>361</height>
+      <y>300</y>
+      <width>731</width>
+      <height>16</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_4">
-     <item>
-      <widget class="QLabel" name="labelChordsLyrics">
-       <property name="text">
-        <string>Acordes / Letra:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPlainTextEdit" name="plainTextEditChordsLyrics">
-       <property name="font">
-        <font>
-         <family>Courier</family>
-        </font>
-       </property>
-       <property name="verticalScrollBarPolicy">
-        <enum>Qt::ScrollBarAsNeeded</enum>
-       </property>
-       <property name="plainText">
-        <string/>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QGroupBox" name="groupBoxDirsndSongs">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>390</y>
-      <width>341</width>
-      <height>211</height>
+      <x>10</x>
+      <y>320</y>
+      <width>351</width>
+      <height>321</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_10">
+    <property name="title">
+     <string>Canciones y carpetas:</string>
+    </property>
+    <widget class="QTreeView" name="treeViewSongsDirectories">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>331</width>
+       <height>281</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxChordsLyrics">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>320</y>
+      <width>731</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Acordes / Letra</string>
+    </property>
+    <widget class="QPlainTextEdit" name="plainTextEditChordsLyrics">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>711</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Courier</family>
+      </font>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="plainText">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>351</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Opciones</string>
+    </property>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>321</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="pushButtonMakeSong">
+        <property name="text">
+         <string>Crear Canción</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="pushButtonMakeDir">
+        <property name="text">
+         <string>Crear Directorio</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButtonSaveSong">
+        <property name="text">
+         <string>Guardar Canción</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="pushButtonDeleteDir">
+        <property name="text">
+         <string>Eliminar Directorio</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="pushButtonEditSongName">
+        <property name="text">
+         <string>Editar Nombre Canción</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="pushButtonDeleteSong">
+        <property name="text">
+         <string>Eliminar Canción</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="pushButtonPrintSong">
+        <property name="text">
+         <string>Imprimir Canción</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>351</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>10</y>
+      <width>731</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Canciones:</string>
+      <widget class="QGroupBox" name="groupBoxMetadata">
+       <property name="title">
+        <string>Metadatos</string>
        </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>221</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_9">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QLabel" name="labelTitle">
+             <property name="text">
+              <string>Titulo:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEditTitle"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="labelAuthor">
+             <property name="text">
+              <string>Autor:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEditAuthor"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLabel" name="labelKey">
+             <property name="text">
+              <string>Tónica:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEditSongKey"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Orden:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEditOrder"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="listView"/>
+      <widget class="QGroupBox" name="groupBoxAdd">
+       <property name="title">
+        <string>Insertar:</string>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>201</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QPushButton" name="pushButtonAddSection">
+           <property name="text">
+            <string>Sección</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonAddChords">
+           <property name="text">
+            <string>Acordes </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonAddMultipleVerses">
+           <property name="text">
+            <string>Versos Multiples</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonComment">
+           <property name="text">
+            <string>Comentario</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonAddColumn">
+           <property name="text">
+            <string>Columna</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonAddPage">
+           <property name="text">
+            <string>Página</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <item>
+        <widget class="QGroupBox" name="groupBoxTranspose">
+         <property name="title">
+          <string>Transponer:</string>
+         </property>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>25</y>
+            <width>191</width>
+            <height>80</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="QComboBox" name="comboBox">
+             <item>
+              <property name="text">
+               <string>Sostenidos</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Bemoles</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_2">
+             <item>
+              <property name="text">
+               <string>-6</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>-5</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>-4</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>-3</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>-2</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>-1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>0</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>2</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>3</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>4</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>5</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>6</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonAcceptTranspose">
+             <property name="text">
+              <string>Aceptar</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBoxPresentation">
+         <property name="title">
+          <string>Presentación</string>
+         </property>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>171</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QRadioButton" name="radioButton">
+             <property name="text">
+              <string>Solo Acordes</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_2">
+             <property name="text">
+              <string>Acordes y Letra</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
-   </widget>
-   <widget class="QTreeView" name="treeViewSongsDirectories">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>231</y>
-      <width>341</width>
-      <height>151</height>
-     </rect>
-    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -401,7 +487,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1104</width>
+     <width>1121</width>
      <height>19</height>
     </rect>
    </property>
